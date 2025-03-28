@@ -11,7 +11,7 @@ class Solution {
 
         while(r<n){
             if(nums[r]==0)countzero++;
-            while(countzero>k){
+             if(countzero>k){
                 if(nums[l]==0) countzero--;
                 l++;
             }
