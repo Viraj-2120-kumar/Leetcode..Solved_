@@ -10,14 +10,22 @@ class Solution {
         int countpair=0;
         int n = words.length;
          
-        for(int i=0; i<n;i++){
+        // for(int i=0; i<n;i++){
+        //     String temp = reverse(words[i]);
+        //     if(ans.contains(temp)) {
+        //         ans.remove(temp);
+        //         countpair++;
+        //     }
+        //     else{
+        //         ans.add(words[i]);
+        //     }
+        // }
+
+        for(int i = 0 ;i<n;i++){
             String temp = reverse(words[i]);
-            if(ans.contains(temp)) {
-                ans.remove(temp);
+            for(int j=i+1 ;j<n;j++){
+                if(words[j].equals(temp))
                 countpair++;
-            }
-            else{
-                ans.add(words[i]);
             }
         }
 
