@@ -9,21 +9,12 @@ class Solution {
              if(nums[i]==2)
             c++;
         }
-        int index=0;
-        for(int i=0;i<a;i++)
+        for(int i=0;i<nums.length;i++)
         {
-            nums[index]=0;
-            index++;
-        }
-         for(int i=0;i<b;i++)
-        {
-            nums[index]=1;
-            index++;
-        }
-         for(int i=0;i<c;i++)
-        {
-            nums[index]=2;
-            index++;
+            if(i<a)nums[i]=0;
+            else if(i>=a && i<a+b) nums[i]=1;
+            else nums[i]=2;
+          
         }
         
     }
