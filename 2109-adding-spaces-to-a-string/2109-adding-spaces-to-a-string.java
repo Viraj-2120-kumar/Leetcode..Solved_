@@ -3,16 +3,21 @@ class Solution {
         int m=s.length();
         int n = spaces.length;
         int i,j=0;
-        String result="";
+        StringBuilder sb=new StringBuilder();
+        //we can't directly use string result+=s.charAt(i);or result+=" ";
+        /*In Java, strings are immutable, so every time you 
+        do result +=   something, a new string is created.
+         This makes the operation O(k²) in the worst case when done in a 
+         loop — which kills performance for large strings. tle aayega
+         */
         //o(m+n) is t.c 
-        //easy ques
         for(i=0;i<m;i++){
             if(  j<n && i==spaces[j] ){
-                result+=" ";
+                sb.append(" ");
                 j++;
             }
-            result+=s.charAt(i);
+              sb.append(s.charAt(i));
         }
-        return result;
+        return sb.toString();
     }
 }
